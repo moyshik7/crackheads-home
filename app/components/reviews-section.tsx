@@ -2,6 +2,18 @@
 
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import Image from "next/image";
+
+const clientLogos = [
+  { src: "/images/clients/acequad.webp", alt: "Acequad" },
+  { src: "/images/clients/bmc.jpeg", alt: "BMC" },
+  { src: "/images/clients/bmss.jpg", alt: "BMSS" },
+  { src: "/images/clients/chitrolekha.jpg", alt: "Chitrolekha" },
+  { src: "/images/clients/digitonica.jpg", alt: "Digitonica" },
+  { src: "/images/clients/sandhani.jpg", alt: "Sandhani" },
+  { src: "/images/clients/shikushop.jpg", alt: "Shikushop" },
+  { src: "/images/clients/techsolution.jpg", alt: "Techsolution" },
+];
 
 const reviews = [
   {
@@ -64,6 +76,23 @@ export function ReviewsSection() {
         <p className="mb-8 max-w-2xl text-base font-semibold text-[#5f588c]/85 md:text-lg">
           Not kidding—these are actual messages from our clients. (Mostly in Bengali, our native language 💜)
         </p>
+
+        <div className="mb-8 rounded-4xl bg-white/50 p-5 shadow-[0_16px_35px_rgba(176,170,243,0.2)] backdrop-blur-xl">
+          <p className="mb-4 text-xs font-black uppercase tracking-[0.16em] text-[#6b6298]/75">Trusted by teams</p>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {clientLogos.map((logo) => (
+              <div key={logo.src} className="flex h-20 items-center justify-center rounded-2xl bg-white/85 px-3 py-2">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={120}
+                  height={56}
+                  className="h-10 w-auto object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map((review, index) => (

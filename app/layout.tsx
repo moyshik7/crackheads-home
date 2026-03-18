@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
-import { brandName, defaultKeywords, siteUrl } from "./lib/seo";
+import { brandName, defaultKeywords, defaultSocialImage, siteUrl } from "./lib/seo";
 import { CustomCursor } from "./components/custom-cursor";
 import { FloatingNavbar } from "./components/floating-navbar";
 import { PastelMeshBackground } from "./components/pastel-mesh-background";
@@ -36,11 +36,20 @@ export const metadata: Metadata = {
     siteName: brandName,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: defaultSocialImage,
+        width: 1200,
+        height: 630,
+        alt: "Crackheads Studio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Crackheads Studio",
     description: "Web and app development, product engineering, and managed hosting for fast-growing teams.",
+    images: [defaultSocialImage],
   },
   robots: {
     index: true,

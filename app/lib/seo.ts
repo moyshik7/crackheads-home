@@ -38,6 +38,7 @@ function normalizeSiteUrl(value?: string): string {
 }
 
 export const siteUrl = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
+export const defaultSocialImage = "/images/logo.png";
 
 type PageMetadataConfig = {
   title: string;
@@ -65,11 +66,20 @@ export function buildPageMetadata(config: PageMetadataConfig): Metadata {
       siteName: brandName,
       locale: "en_US",
       type: config.type ?? "website",
+      images: [
+        {
+          url: defaultSocialImage,
+          width: 1200,
+          height: 630,
+          alt: `${brandName} preview image`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: config.title,
       description: config.description,
+      images: [defaultSocialImage],
     },
     robots: {
       index: true,

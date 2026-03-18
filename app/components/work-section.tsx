@@ -1,25 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const marqueeText = "LATEST WORK • SWEET APPS • BEAUTIFUL WEBSITES • ";
 
 const projects = [
   {
-    name: "Bloom Basket",
+    name: "Clothing Storefront",
     tone: "from-[#ffc9da] to-[#ffdfb8]",
+    screenshot: "/images/ss/clothing-example.webp",
   },
   {
-    name: "Ripple Notes",
+    name: "Pet Marketplace",
     tone: "from-[#bbecff] to-[#c7f3d5]",
+    screenshot: "/images/ss/pet-example.webp",
   },
   {
-    name: "Petal Finance",
+    name: "Vape Commerce",
     tone: "from-[#d9ccff] to-[#ffcce4]",
+    screenshot: "/images/ss/vape-example.webp",
   },
   {
-    name: "Mimi Health",
+    name: "Mindspace",
     tone: "from-[#fff1b0] to-[#c8f5c9]",
+    screenshot: "/images/projects/mindspace.webp",
   },
 ];
 
@@ -64,7 +69,16 @@ export function WorkSection() {
               boxShadow: "0 40px 70px rgba(255,170,198,0.35)",
             }}
           >
-            <div className="absolute inset-0 bg-white/20" />
+            <div className="absolute inset-0">
+              <Image
+                src={project.screenshot}
+                alt={`${project.name} screenshot`}
+                fill
+                className="object-cover opacity-70 transition duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+              />
+            </div>
+            <div className="absolute inset-0 bg-white/35" />
             <div className="relative flex h-full flex-col justify-between rounded-3xl bg-white/40 p-5 backdrop-blur-md">
               <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#675c95]/75">
                 Featured Project
