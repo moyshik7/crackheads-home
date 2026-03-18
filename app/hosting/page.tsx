@@ -1,6 +1,21 @@
 import { SimplePageHero } from "../components/simple-page-hero";
 import { ServerlessPricingCalculator } from "../components/serverless-pricing-calculator";
 import Link from "next/link";
+import { buildPageMetadata } from "../lib/seo";
+
+export const metadata = buildPageMetadata({
+  title: "Managed Hosting, VPS and Serverless Pricing",
+  description:
+    "Compare managed hosting options including VPS, dedicated servers, serverless pricing, load balancers, and n8n hosting from Crackheads Studio.",
+  path: "/hosting",
+  keywords: [
+    "vps hosting pricing",
+    "serverless hosting pricing",
+    "dedicated server hosting",
+    "n8n hosting",
+    "managed hosting services",
+  ],
+});
 
 const hostingOffers = ["VPS", "Dedicated VPS", "n8n Hosting", "Next.js Hosting", "Serverless Hosting"];
 

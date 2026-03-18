@@ -34,14 +34,6 @@ export function HeroSection() {
       />
 
       <div className="relative z-10 mx-auto max-w-6xl text-center">
-        <motion.p
-          className="mb-5 inline-block rounded-full bg-white/60 px-5 py-2 text-sm font-semibold text-[#6f67a5] shadow-[0_8px_30px_rgba(255,174,198,0.35)] backdrop-blur-xl"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 120, damping: 16, delay: 0.2 }}
-        >
-          Modern web and app development for delightful products.
-        </motion.p>
         <h1 className="text-balance text-5xl font-black leading-[0.9] text-[#534a84] sm:text-6xl md:text-8xl lg:text-9xl">
           {headline.split("").map((letter, index) => (
             <motion.span

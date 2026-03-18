@@ -1,5 +1,20 @@
 import Link from "next/link";
 import { SimplePageHero } from "../components/simple-page-hero";
+import { buildPageMetadata } from "../lib/seo";
+
+export const metadata = buildPageMetadata({
+  title: "Solution Tracks for Ecommerce, SaaS, Hosting and Security",
+  description:
+    "Discover solution tracks built by Crackheads Studio for ecommerce growth, SaaS product scale, hosting reliability, and cyber security hardening.",
+  path: "/solutions",
+  keywords: [
+    "digital product solutions",
+    "ecommerce solutions",
+    "saas solutions",
+    "cyber security solutions",
+    "hosting solutions",
+  ],
+});
 
 const solutions = [
   {

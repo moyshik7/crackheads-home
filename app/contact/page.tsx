@@ -1,5 +1,19 @@
 import { Mail, MessageSquare, Phone } from "lucide-react";
 import { SimplePageHero } from "../components/simple-page-hero";
+import { buildPageMetadata } from "../lib/seo";
+
+export const metadata = buildPageMetadata({
+  title: "Contact Crackheads Studio",
+  description:
+    "Contact Crackheads Studio for web and app development, SaaS engineering, ecommerce optimization, and managed hosting services.",
+  path: "/contact",
+  keywords: [
+    "contact web development agency",
+    "request software project quote",
+    "app development consultation",
+    "hosting sales contact",
+  ],
+});
 
 const faqs = [
   {

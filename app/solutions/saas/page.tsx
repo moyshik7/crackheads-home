@@ -1,5 +1,20 @@
 import { BarChart3, Users } from "lucide-react";
 import { SimplePageHero } from "../../components/simple-page-hero";
+import { buildPageMetadata } from "../../lib/seo";
+
+export const metadata = buildPageMetadata({
+  title: "SaaS Product Development Solutions",
+  description:
+    "SaaS development services for onboarding, role-based product UX, analytics dashboards, billing flows, and scalable frontend systems.",
+  path: "/solutions/saas",
+  keywords: [
+    "saas development services",
+    "saas product engineering",
+    "dashboard development",
+    "subscription product development",
+    "saas onboarding optimization",
+  ],
+});
 
 const saasDeliverables = [
   "Guided onboarding flows",

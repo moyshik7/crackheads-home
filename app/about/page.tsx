@@ -1,5 +1,19 @@
 import { Sparkles, Zap } from "lucide-react";
 import { SimplePageHero } from "../components/simple-page-hero";
+import { buildPageMetadata } from "../lib/seo";
+
+export const metadata = buildPageMetadata({
+  title: "About Crackheads Studio",
+  description:
+    "Learn how Crackheads Studio combines product strategy, design, and engineering to deliver fast, maintainable web and app experiences.",
+  path: "/about",
+  keywords: [
+    "about crackheads studio",
+    "product design team",
+    "web engineering studio",
+    "app development experts",
+  ],
+});
 
 const principles = [
   "Design with emotion, ship with precision.",

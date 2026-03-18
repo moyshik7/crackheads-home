@@ -1,6 +1,21 @@
 import Link from "next/link";
 import { ShieldCheck, Zap, Headphones, BarChart3 } from "lucide-react";
 import { SimplePageHero } from "../components/simple-page-hero";
+import { buildPageMetadata } from "../lib/seo";
+
+export const metadata = buildPageMetadata({
+  title: "Corporate Hosting for Agencies and Enterprise",
+  description:
+    "Enterprise and agency-grade managed hosting with performance tuning, security hardening, priority support, and scalable infrastructure.",
+  path: "/corporate-hosting",
+  keywords: [
+    "corporate hosting",
+    "enterprise hosting",
+    "agency hosting plans",
+    "managed infrastructure",
+    "high availability hosting",
+  ],
+});
 
 const EXCHANGE_RATE = 140;
 

@@ -1,5 +1,20 @@
 import { ShoppingBag, TrendingUp } from "lucide-react";
 import { SimplePageHero } from "../../components/simple-page-hero";
+import { buildPageMetadata } from "../../lib/seo";
+
+export const metadata = buildPageMetadata({
+  title: "Ecommerce Development Solutions",
+  description:
+    "Conversion-focused ecommerce development with fast storefront UX, checkout optimization, analytics, and scalable architecture.",
+  path: "/solutions/ecommerce",
+  keywords: [
+    "ecommerce development company",
+    "shopify alternative storefront",
+    "headless ecommerce development",
+    "checkout optimization",
+    "ecommerce seo development",
+  ],
+});
 
 const ecommerceStack = ["Next.js storefronts", "Headless CMS", "Stripe-ready checkout", "Product analytics", "A/B test hooks", "SEO foundations"];
 

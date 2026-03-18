@@ -1,5 +1,20 @@
 import { Lock, ShieldCheck } from "lucide-react";
 import { SimplePageHero } from "../../../components/simple-page-hero";
+import { buildPageMetadata } from "../../../lib/seo";
+
+export const metadata = buildPageMetadata({
+  title: "Cyber Security Solutions for Web Applications",
+  description:
+    "Practical cyber security solutions covering authentication hardening, permission boundaries, secure API patterns, and incident readiness.",
+  path: "/solutions/cyber/security",
+  keywords: [
+    "web application security",
+    "cyber security consulting",
+    "secure authentication patterns",
+    "application hardening services",
+    "security architecture review",
+  ],
+});
 
 const securityFocus = [
   "Auth and session hardening",

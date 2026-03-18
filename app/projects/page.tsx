@@ -1,4 +1,18 @@
 import { SimplePageHero } from "../components/simple-page-hero";
+import { buildPageMetadata } from "../lib/seo";
+
+export const metadata = buildPageMetadata({
+  title: "Project Portfolio and Case Studies",
+  description:
+    "Explore Crackheads Studio case studies across ecommerce, SaaS, mobile apps, hosting tools, and product growth systems.",
+  path: "/projects",
+  keywords: [
+    "web development portfolio",
+    "saas case studies",
+    "ecommerce project examples",
+    "software project gallery",
+  ],
+});
 
 const projects = [
   "Bloom Basket Commerce",
