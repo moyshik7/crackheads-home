@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { MonitorSmartphone, Smartphone } from "lucide-react";
+import Link from "next/link";
 
 const extraServices = [
   "UI/UX Product Design",
@@ -150,6 +151,37 @@ export function ServicesSection() {
                 <p className="font-bold text-[#4f477b]">{item}</p>
               </motion.div>
             ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="mt-6 rounded-4xl bg-linear-to-r from-[#ffe7f2]/85 via-[#e5edff]/85 to-[#defde8]/85 p-6 shadow-[0_20px_45px_rgba(176,170,243,0.18)] md:p-8"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ type: "spring", stiffness: 120, damping: 17 }}
+        >
+          <h3 className="text-2xl font-black text-[#4f477b] md:text-3xl">Hosting services for every scale</h3>
+          <p className="mt-2 max-w-3xl text-sm font-semibold text-[#5f588c]/90 md:text-base">
+            Choose standard infrastructure pricing or go straight to managed corporate plans.
+          </p>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            <Link
+              href="/hosting"
+              className="rounded-3xl bg-white/90 p-4 shadow-[0_10px_20px_rgba(79,71,123,0.15)] transition hover:-translate-y-0.5"
+            >
+              <p className="text-xs font-black uppercase tracking-[0.12em] text-[#6b6298]">Standard Hosting</p>
+              <p className="mt-1 text-xl font-black text-[#4f477b]">/hosting</p>
+              <p className="mt-1 text-sm font-semibold text-[#5f588c]/90">VPS, load balancer, n8n, serverless, and bare metal pricing.</p>
+            </Link>
+            <Link
+              href="/corporate-hosting"
+              className="rounded-3xl bg-[#4f477b] p-4 shadow-[0_10px_22px_rgba(79,71,123,0.35)] transition hover:-translate-y-0.5"
+            >
+              <p className="text-xs font-black uppercase tracking-[0.12em] text-[#cfc9ff]">Corporate Hosting</p>
+              <p className="mt-1 text-xl font-black text-white">/corporate-hosting</p>
+              <p className="mt-1 text-sm font-semibold text-white/90">Agency-focused plans with managed support and enterprise readiness.</p>
+            </Link>
           </div>
         </motion.div>
       </motion.div>

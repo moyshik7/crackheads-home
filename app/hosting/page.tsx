@@ -1,5 +1,6 @@
 import { SimplePageHero } from "../components/simple-page-hero";
 import { ServerlessPricingCalculator } from "../components/serverless-pricing-calculator";
+import Link from "next/link";
 
 const hostingOffers = ["VPS", "Dedicated VPS", "n8n Hosting", "Next.js Hosting", "Serverless Hosting"];
 
@@ -249,6 +250,30 @@ export default function HostingPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-6 grid max-w-6xl gap-4 rounded-4xl bg-white/55 p-7 shadow-[0_20px_45px_rgba(176,170,243,0.22)] backdrop-blur-xl md:grid-cols-2 md:p-8">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-[#6b6298]">Need enterprise-grade setup?</p>
+            <h2 className="mt-2 text-2xl font-black text-[#4f477b] md:text-3xl">Explore Corporate Hosting</h2>
+            <p className="mt-2 font-semibold text-[#5f588c]/90">
+              Compare managed plans for agencies, advanced support layers, and scalable deployment operations.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-1">
+            <Link
+              href="/corporate-hosting"
+              className="rounded-3xl bg-[#4f477b] px-5 py-4 text-sm font-black uppercase tracking-widest text-white shadow-[0_10px_24px_rgba(79,71,123,0.35)] transition hover:-translate-y-0.5"
+            >
+              Open /corporate-hosting
+            </Link>
+            <Link
+              href="/hosting"
+              className="rounded-3xl bg-white px-5 py-4 text-sm font-black uppercase tracking-widest text-[#4f477b] shadow-[0_10px_24px_rgba(79,71,123,0.18)] transition hover:-translate-y-0.5"
+            >
+              Stay on /hosting
+            </Link>
           </div>
         </div>
       </section>

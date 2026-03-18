@@ -41,12 +41,22 @@ export function HostingHomeSection() {
           ))}
         </div>
 
-        <div className="mt-7">
+        <div className="mt-7 grid gap-3 sm:grid-cols-2">
           <Link
             href="/hosting"
-            className="inline-flex rounded-full bg-[#4f477b] px-6 py-3 text-sm font-black uppercase tracking-widest text-white shadow-[0_10px_26px_rgba(79,71,123,0.35)] transition hover:-translate-y-0.5"
+            className="rounded-3xl bg-white/80 p-4 shadow-[0_12px_25px_rgba(134,124,205,0.22)] transition hover:-translate-y-0.5"
           >
-            View Hosting Prices
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-[#6b6298]">Core Hosting</p>
+            <p className="mt-1 text-xl font-black text-[#4f477b]">/hosting</p>
+            <p className="mt-1 text-sm font-semibold text-[#5f588c]/90">VPS, serverless, n8n, and bare metal pricing.</p>
+          </Link>
+          <Link
+            href="/corporate-hosting"
+            className="rounded-3xl bg-[#4f477b] p-4 shadow-[0_12px_25px_rgba(79,71,123,0.35)] transition hover:-translate-y-0.5"
+          >
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-[#cfc9ff]">Enterprise Plans</p>
+            <p className="mt-1 text-xl font-black text-white">/corporate-hosting</p>
+            <p className="mt-1 text-sm font-semibold text-white/90">Managed agency-focused packages and priority support.</p>
           </Link>
         </div>
       </motion.div>
