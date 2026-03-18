@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { MonitorSmartphone, Smartphone } from "lucide-react";
+import { ArrowRight, MonitorSmartphone, Smartphone } from "lucide-react";
 import Link from "next/link";
 
 const extraServices = [
@@ -18,9 +18,10 @@ type ServiceCardProps = {
   description: string;
   icon: React.ReactNode;
   gradient: string;
+  href: string;
 };
 
-function ServiceCard({ title, description, icon, gradient }: ServiceCardProps) {
+function ServiceCard({ title, description, icon, gradient, href }: ServiceCardProps) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -62,6 +63,13 @@ function ServiceCard({ title, description, icon, gradient }: ServiceCardProps) {
         </div>
         <h3 className="text-3xl font-extrabold text-[#4f477b] md:text-4xl">{title}</h3>
         <p className="max-w-md text-base font-medium text-[#4f477b]/85 md:text-lg">{description}</p>
+        <Link
+          href={href}
+          className="group inline-flex w-max items-center gap-2 rounded-full bg-white/85 px-4 py-2 text-sm font-black text-[#4f477b] shadow-[0_10px_20px_rgba(132,146,227,0.25)] transition hover:-translate-y-0.5"
+        >
+          See full details
+          <ArrowRight size={15} className="transition group-hover:translate-x-0.5" />
+        </Link>
         <div className="mt-4 grid flex-1 place-items-center rounded-3xl bg-white/45 p-6 backdrop-blur-xl">
           {title === "Web Development" ? (
             <div className="w-full max-w-sm rounded-2xl bg-[#fefcf8]/95 p-4 shadow-xl">
@@ -117,12 +125,14 @@ export function ServicesSection() {
             description="Fast, expressive websites with smooth interactions and resilient architecture that scales with your growth."
             icon={<MonitorSmartphone size={30} />}
             gradient="bg-gradient-to-br from-[#baf1dd] via-[#cce9ff] to-[#d9d0ff]"
+            href="/webdev"
           />
           <ServiceCard
             title="App Development"
             description="Polished mobile and cross-platform app experiences crafted for delightful everyday use and strong performance."
             icon={<Smartphone size={30} />}
             gradient="bg-gradient-to-br from-[#ffd0c0] via-[#ffd7ea] to-[#d9ccff]"
+            href="/appdev"
           />
         </div>
 
@@ -184,6 +194,48 @@ export function ServicesSection() {
             </Link>
           </div>
         </motion.div>
+      </motion.div>
+    </section>
+  );
+}
+
+
+
+export const ServicesSection2 = () => {
+  return (
+    <section id="services" className="px-6 py-20 md:px-10 md:py-28">
+      <motion.div
+        className="mx-auto max-w-6xl"
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ type: "spring", stiffness: 90, damping: 18 }}
+      >
+        <motion.h2
+          className="mb-10 text-4xl font-black text-[#534a84] sm:text-5xl md:text-6xl"
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 140, damping: 17 }}
+        >
+          What we cook up?
+        </motion.h2>
+        <div className="grid gap-6 md:grid-cols-2">
+          <ServiceCard
+            title="Web Development"
+            description="Fast, expressive websites with smooth interactions and resilient architecture that scales with your growth."
+            icon={<MonitorSmartphone size={30} />}
+            gradient="bg-gradient-to-br from-[#baf1dd] via-[#cce9ff] to-[#d9d0ff]"
+            href="/webdev"
+          />
+          <ServiceCard
+            title="App Development"
+            description="Polished mobile and cross-platform app experiences crafted for delightful everyday use and strong performance."
+            icon={<Smartphone size={30} />}
+            gradient="bg-gradient-to-br from-[#ffd0c0] via-[#ffd7ea] to-[#d9ccff]"
+            href="/appdev"
+          />
+        </div>
       </motion.div>
     </section>
   );

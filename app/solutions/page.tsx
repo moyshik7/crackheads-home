@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SimplePageHero } from "../components/simple-page-hero";
 import { buildPageMetadata } from "../lib/seo";
+import { ServicesSection2 } from "../components/services-section";
 
 export const metadata = buildPageMetadata({
   title: "Solution Tracks for Ecommerce, SaaS, Hosting and Security",
@@ -54,6 +55,9 @@ export default function SolutionsPage() {
         title="Built for growth, tuned for reliability."
         description="Crackheads Studio delivers complete solution tracks for ecommerce, SaaS, hosting, and cyber security needs."
       />
+
+
+      <ServicesSection2 />
 
       <section className="px-6 pb-18 md:px-10 md:pb-20">
         <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2">

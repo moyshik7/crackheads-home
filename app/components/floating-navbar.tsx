@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const navItems = [
+  { href: "/webdev", label: "Web Dev" },
+  { href: "/appdev", label: "App Dev" },
   { href: "/solutions", label: "Solutions" },
   { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
@@ -39,7 +41,7 @@ export function FloatingNavbar() {
         <Link
           href="/contact"
           data-cursor="hover"
-          className="rounded-full bg-gradient-to-r from-[#ffc2dc] via-[#b9d9ff] to-[#bff4cf] px-4 py-2 text-sm font-bold text-[#4f477b] shadow-[0_8px_22px_rgba(173,206,255,0.55)] transition hover:scale-105"
+          className="rounded-full bg-linear-to-r from-[#ffc2dc] via-[#b9d9ff] to-[#bff4cf] px-4 py-2 text-sm font-bold text-[#4f477b] shadow-[0_8px_22px_rgba(173,206,255,0.55)] transition hover:scale-105"
         >
           Let&apos;s Talk
         </Link>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const headline = "We build sweet digital experiences.";
 
@@ -53,6 +54,30 @@ export function HeroSection() {
             </motion.span>
           ))}
         </h1>
+
+        <motion.div
+          className="mx-auto mt-8 grid max-w-3xl gap-3 sm:grid-cols-2"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, type: "spring", stiffness: 110, damping: 17 }}
+        >
+          <Link
+            href="/webdev"
+            className="rounded-3xl bg-white/70 p-4 text-left shadow-[0_14px_30px_rgba(161,172,250,0.28)] backdrop-blur-xl transition hover:-translate-y-0.5"
+          >
+            <p className="text-xs font-black uppercase tracking-widest text-[#6a6298]">Web Development</p>
+            <p className="mt-1 text-2xl font-black text-[#4f477b]">See process + pricing</p>
+            <p className="mt-1 text-sm font-semibold text-[#5f588c]/90">/webdev</p>
+          </Link>
+          <Link
+            href="/appdev"
+            className="rounded-3xl bg-white/70 p-4 text-left shadow-[0_14px_30px_rgba(161,172,250,0.28)] backdrop-blur-xl transition hover:-translate-y-0.5"
+          >
+            <p className="text-xs font-black uppercase tracking-widest text-[#6a6298]">App Development</p>
+            <p className="mt-1 text-2xl font-black text-[#4f477b]">See process + pricing</p>
+            <p className="mt-1 text-sm font-semibold text-[#5f588c]/90">/appdev</p>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
