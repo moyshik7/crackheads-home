@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CaseStudyFlowchart } from "../components/case-study-flowchart";
 import { SimplePageHero } from "../components/simple-page-hero";
 import { buildPageMetadata } from "../lib/seo";
 
@@ -112,16 +113,11 @@ export default function ProjectsPage() {
           </div>
         </div>
 
-        <div className="mx-auto mt-6 grid max-w-6xl gap-5 md:grid-cols-2">
-          <article className="rounded-4xl bg-white/55 p-7 shadow-[0_22px_44px_rgba(173,184,255,0.27)] backdrop-blur-xl">
-            <h2 className="text-2xl font-black text-[#4f477b]">How our case studies are structured</h2>
-            <ul className="mt-3 space-y-2 font-semibold text-[#5f588c]/90">
-              <li>Problem framing and target metrics.</li>
-              <li>Design and engineering decisions made.</li>
-              <li>Performance and conversion outcomes.</li>
-              <li>Post-launch iteration roadmap.</li>
-            </ul>
-          </article>
+        <div className="mx-auto mt-6 max-w-6xl">
+          <CaseStudyFlowchart />
+        </div>
+
+        <div className="mx-auto mt-6 max-w-6xl">
           <article className="rounded-4xl bg-white/55 p-7 shadow-[0_22px_44px_rgba(173,184,255,0.27)] backdrop-blur-xl">
             <h2 className="text-2xl font-black text-[#4f477b]">Delivery standards across every build</h2>
             <ul className="mt-3 space-y-2 font-semibold text-[#5f588c]/90">
